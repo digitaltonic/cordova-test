@@ -4,5 +4,10 @@ node_js:
   - "6.0"
 install:
     - npm install
-    - npm install ios-deploy
-    - npm install -g codecov
+    - npm install -g cordova ios-deploy
+script:
+    - cordova prepare
+after_script:
+    - cordova build ios
+
+
