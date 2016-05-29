@@ -3,7 +3,7 @@ sudo: false
 node_js:
   - "6.0"
 install:
-    - brew install android-platform-tools
+    - brew install android-sdk
     - npm install
     - npm install -g cordova ios-deploy
 script:
