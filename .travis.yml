@@ -1,7 +1,5 @@
 language: objective-c
-matrix:
-  include:
-  - jdk: oraclejdk8
+language: android
 sudo: false
 node_js:
   - "6.0"
@@ -10,7 +8,5 @@ install:
     - npm install -g cordova ios-deploy
 script:
     - cordova prepare
-after_script:
     - cordova build android
     - cordova build ios
-
