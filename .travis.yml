@@ -4,6 +4,8 @@ node_js:
   - "6.0"
 install:
     - brew install android-sdk
+    - export ANDROID_HOME=/usr/local/opt/android-sdk
+    - android -s update sdk --no-ui
     - npm install
     - npm install -g cordova ios-deploy
 script:
@@ -13,3 +15,8 @@ script:
 
 
 
+1. "SDK Platform" for android-23
+2. "Android SDK Platform-tools (latest)
+3. "Android SDK Build-tools" (latest)
+
+android list sdk
