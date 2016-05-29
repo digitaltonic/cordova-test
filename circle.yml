@@ -6,6 +6,7 @@ machine:
     XCODE_PROJECT: "placeholder.xcodeproj"
 dependencies:
   pre:
+    - brew install wget
     - wget https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg
     - installer -pkg node-v6.2.0.pkg -target /
     - brew install android-sdk
