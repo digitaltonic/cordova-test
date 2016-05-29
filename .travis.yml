@@ -1,4 +1,7 @@
 language: objective-c
+addons:
+  artifacts:
+    debug: true
 sudo: false
 node_js:
   - "6.0"
