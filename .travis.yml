@@ -11,6 +11,6 @@ install:
 script:
     - cordova prepare
 after_script:
+    - cordova build android
     - cordova build ios
-
 
