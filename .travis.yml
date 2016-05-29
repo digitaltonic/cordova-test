@@ -1,12 +1,15 @@
 language: objective-c
-language: android
 sudo: false
 node_js:
   - "6.0"
 install:
+    - brew install java android-platform-tools
     - npm install
     - npm install -g cordova ios-deploy
 script:
     - cordova prepare
     - cordova build android
     - cordova build ios
+
+
+
