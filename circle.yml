@@ -1,0 +1,12 @@
+machine:
+  xcode:
+    version: 7.3
+  environment:
+    XCODE_SCHEME: "Placeholder"
+    XCODE_PROJECT: "placeholder.xcodeproj"
+dependencies:
+  pre:
+    - brew install android-sdk
+    - bash ./install-android-sdk
+    - npm install
+    - npm install -g cordova ios-deploy
