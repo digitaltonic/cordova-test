@@ -1,4 +1,7 @@
 language: objective-c
+matrix:
+  include:
+  - jdk: oraclejdk8
 sudo: false
 node_js:
   - "6.0"
