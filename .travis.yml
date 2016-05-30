@@ -15,3 +15,5 @@ script:
     - cordova prepare
     - cordova build android
     - cordova build ios
+before_deploy:
+    - git ls-files -o
