@@ -13,7 +13,7 @@ dependencies:
     - export ANDROID_HOME=/usr/local/opt/android-sdk
     - bash ./install-android-sdk
     - npm install
-    - npm install -g cordova ios-deploy
+    - npm install cordova ios-deploy
     - cordova prepare
     - cordova build ios
     - cordova build android
