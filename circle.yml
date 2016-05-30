@@ -1,3 +1,7 @@
+general:
+  artifacts:
+    - "platforms/android/build/outputs/apk/" # relative to the build directory
+    - "platforms/ios/build" # relative to the user's home directory
 machine:
   xcode:
     version: 7.3
