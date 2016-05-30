@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/digitaltonic/cordova-test/issues"
   },
-  "homepage": "https://github.com/digitaltonic/cordova-test#readme"
+  "homepage": "https://github.com/digitaltonic/cordova-test#readme",
+  "dependencies": {
+    "cordova": "6.2.0",
+    "ios-deploy": "1.8.6"
+  }
 }
