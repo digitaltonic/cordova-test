@@ -2,16 +2,22 @@ language: objective-c
 addons:
   artifacts:
     debug: true
+    paths:
+        - platforms/ios/build/*
+        - platforms/android/build/*
 sudo: false
 node_js:
   - "6.0"
-install:
+env:
+    - ANDROID_HOME=/usr/local/opt/android-sdk
+before_install:
     - brew install android-sdk
-    - export ANDROID_HOME=/usr/local/opt/android-sdk
     - bash ./install-android-sdk
-    - npm install
+install:
 script:
     - ./node_modules/.bin/cordova prepare
     - ./node_modules/.bin/cordova build android
     - ./node_modules/.bin/cordova build ios
     - find . -name '.apk' -name '.app' -name '.ipa'
+after_success:
+
