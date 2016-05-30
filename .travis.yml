@@ -10,10 +10,9 @@ install:
     - export ANDROID_HOME=/usr/local/opt/android-sdk
     - bash ./install-android-sdk
     - npm install
-    - npm install -g cordova ios-deploy
+    - sudo npm install -g cordova ios-deploy
 script:
     - cordova prepare
     - cordova build android
     - cordova build ios
-before_deploy:
-    - git ls-files -o
+    - find . -name '.apk' -name '.app' -name '.ipa'

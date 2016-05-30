@@ -2,7 +2,7 @@
 
 expect -c '
 set timeout -1   ;
-spawn /usr/local/opt/android-sdk/tools/android -s update sdk --no-ui --filter 1,2,3,android-23;
+spawn /usr/local/opt/android-sdk/tools/android update sdk -u -t 1,2,3;
 expect {
     "Do you accept the license" { exp_send "y\r" ; exp_continue }
     eof
