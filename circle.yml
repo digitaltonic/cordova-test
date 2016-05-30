@@ -4,15 +4,22 @@ machine:
   environment:
     XCODE_SCHEME: "Placeholder"
     XCODE_PROJECT: "placeholder.xcodeproj"
-dependencies:
+    ANDROID_HOME: "/usr/local/opt/android-sdk"
   pre:
     - brew install wget
     - wget https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg
     - sudo installer -pkg node-v6.2.0.pkg -target /
     - brew install android-sdk
+dependencies:
+  override:
+    - npm test
+  pre:
     - export ANDROID_HOME=/usr/local/opt/android-sdk
     - bash ./install-android-sdk
-    - npm install
+  post:
     - ./node_modules/.bin/cordova prepare
     - ./node_modules/.bin/cordova build ios
     - ./node_modules/.bin/cordova build android
+test:
+  override:
+    - echo 1
