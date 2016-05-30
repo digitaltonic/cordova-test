@@ -14,6 +14,6 @@ dependencies:
     - bash ./install-android-sdk
     - npm install
     - npm install cordova ios-deploy
-    - cordova prepare
-    - cordova build ios
-    - cordova build android
+    - ./node_modules/.bin/cordova prepare
+    - ./node_modules/.bin/cordova build ios
+    - ./node_modules/.bin/cordova build android
